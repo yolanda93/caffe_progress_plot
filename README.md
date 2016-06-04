@@ -49,3 +49,6 @@ plot "values.dat" using 1:3 lt 3 title "f2"
 ...
 clear
 unset multiplot
+
+
+plot "trace1.dat" using 1:3 axes x1y1 title "distances" with lines lw 2 lc rgb 'blue'
