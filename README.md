@@ -32,3 +32,20 @@ Then in terminal run,
  gnuplot> set datafile separator ','  
  gnuplot> plot 'mylog.log.train' using 1:4 with line # accuracy throughout the iterations  
  gnuplot> plot 'mylog.log.train' using 1:5 with line # loss throughout the iterations  
+
+
+Don't clear the window, very general method:
+set multiplot
+
+# common margins
+set lmargin 10
+set rmargin 2
+
+# common y-range
+set yrange [0:1.3e+9]
+
+plot "values.dat" using 1:2 title "f1"
+plot "values.dat" using 1:3 lt 3 title "f2"
+...
+clear
+unset multiplot
